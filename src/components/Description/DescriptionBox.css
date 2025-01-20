@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+.box {
+  margin: 100px 170px;
+}
+.navigator {
+  display: flex;
+}
+.nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.fade {
+  background-color: #fbfbfb;
+  color: #555;
+}
+.active {
+  background-color: white;
+  color: black;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.description-box {
+  border: 1px solid #d0d0d0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+}
+.desc-review-box {
+  border: 1px solid #d0d0d0;
+}
