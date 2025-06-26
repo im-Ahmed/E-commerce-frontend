@@ -22,7 +22,7 @@ const DescriptionBox = () => {
             setDescription("reviews");
           }}
         >
-          Review (12)
+          Review (3)
         </div>
       </div>
       <div className="description-box">

@@ -4,23 +4,60 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
+
 .popular h1 {
   color: #171717;
   font-size: 40px;
   font-weight: 600;
 }
+
 .popular hr {
   width: 200px;
   height: 6px;
   border-radius: 10px;
   background: #252525;
+  margin: 1rem auto;
 }
+
 .popular-item {
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+@media (max-width: 768px) {
+  .popular h1 {
+    font-size: 32px;
+  }
+
+  .popular hr {
+    width: 150px;
+  }
+
+  .popular-item {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular h1 {
+    font-size: 24px;
+  }
+
+  .popular hr {
+    width: 100px;
+    height: 4px;
+  }
+
+  .popular-item {
+    gap: 20px;
+  }
 }

@@ -6,79 +6,107 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
-  let [menu, setMenu] = useState("shop");
+  const [menu, setMenu] = useState("shop");
+  const [menuOpen, setMenuOpen] = useState(false);
   const { getCartItems } = useContext(ShopContext);
+
+  const handleLinkClick = (value) => {
+    setMenu(value);
+    setMenuOpen(false); // Close the menu on link click
+  };
+
   return (
-    <div>
-      <div className="navbar">
-        <div className="nav-logo">
-          <img src={logo} alt="" />
-          <p>SHOPPER</p>
-        </div>
-        <ul className="nav-menu">
-          <Link style={{ textDecoration: "none", color: "#626262" }} to="/">
-            <li
-              onClick={() => {
-                setMenu("shop");
-              }}
-            >
-              Shop {menu === "shop" ? <hr /> : <></>}
-            </li>
-          </Link>
-          <Link style={{ textDecoration: "none", color: "#626262" }} to="/men">
-            <li
-              onClick={() => {
-                setMenu("men");
-              }}
-            >
-              Men{menu === "men" ? <hr /> : <></>}
-            </li>
-          </Link>
-          <Link
-            style={{ textDecoration: "none", color: "#626262" }}
-            to="/women"
+    <div className="navbar">
+      <div className="nav-logo">
+        <img src={logo} alt="logo" />
+        <p>BrandName</p>
+      </div>
+
+      <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
+        <Link to="/" style={{ textDecoration: "none", color: "#626262" }}>
+          <li
+            onClick={() => {
+              handleLinkClick("shop");
+              window.scrollTo(0, 0);
+            }}
           >
-            <li
-              onClick={() => {
-                setMenu("women");
-              }}
-            >
-              Women{menu === "women" ? <hr /> : <></>}
-            </li>
+            Shop {menu === "shop" && <hr />}
+          </li>
+        </Link>
+        <Link to="/men" style={{ textDecoration: "none", color: "#626262" }}>
+          <li
+            onClick={() => {
+              handleLinkClick("men");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Men {menu === "men" && <hr />}
+          </li>
+        </Link>
+        <Link to="/women" style={{ textDecoration: "none", color: "#626262" }}>
+          <li
+            onClick={() => {
+              handleLinkClick("women");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Women {menu === "women" && <hr />}
+          </li>
+        </Link>
+        <Link to="/kids" style={{ textDecoration: "none", color: "#626262" }}>
+          <li
+            onClick={() => {
+              handleLinkClick("kids");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Kids {menu === "kids" && <hr />}
+          </li>
+        </Link>
+
+        {/* Show login only inside dropdown on mobile */}
+        <div className="nav-mobile-login">
+          <Link to="/login">
+            <button onClick={() => handleLinkClick("login")}>Login</button>
           </Link>
-          <Link style={{ textDecoration: "none", color: "#626262" }} to="/kids">
-            <li
-              onClick={() => {
-                setMenu("kids");
-              }}
-            >
-              Kids{menu === "kids" ? <hr /> : <></>}
-            </li>
-          </Link>
-        </ul>
-        <div className="nav-login-cart">
+        </div>
+      </ul>
+
+      {/* Cart always visible */}
+      <div className="nav-login-cart">
+        {/* Show login button only on desktop */}
+        <div className="nav-desktop-login">
           <Link to="/login">
             <button
               onClick={() => {
-                setMenu("login");
+                handleLinkClick("login");
+                window.scrollTo(0, 0);
               }}
             >
               Login
-              {menu === "login" ? <></> : <></>}
             </button>
           </Link>
-          <Link to="/cart">
-            <img
-              src={cart_icon}
-              alt=""
-              onClick={() => {
-                setMenu("cart");
-              }}
-            />
-            {menu === "cart" ? <></> : <></>}
-          </Link>
-          <div className="nav-cart-counter">{getCartItems()}</div>
         </div>
+
+        <Link to="/cart">
+          <img
+            src={cart_icon}
+            alt="cart"
+            className="nav-cart-icon"
+            onClick={() => {
+              handleLinkClick("cart");
+              window.scrollTo(0, 0);
+            }}
+          />
+        </Link>
+        <div className="nav-cart-counter">{getCartItems()}</div>
+      </div>
+
+      {/* Hamburger toggle */}
+      <div className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );

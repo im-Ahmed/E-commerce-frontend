@@ -47,3 +47,62 @@
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 1024px) {
+  .loginsignup-container {
+    width: 50%;
+    padding: 30px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 24px;
+  }
+
+  .loginsignup-fields input {
+    font-size: 14px;
+  }
+
+  .continue {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginsignup {
+    padding: 20% 0;
+    height: auto;
+  }
+
+  .loginsignup-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .loginsignup-fields input {
+    height: 28px;
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .continue {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .agree {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .login {
+    font-size: 14px;
+    text-align: start;
+  }
+}

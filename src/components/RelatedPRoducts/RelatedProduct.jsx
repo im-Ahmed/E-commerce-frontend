@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RelatedPRoduct.css";
-import data_product from "../assets/data";
+import data_product from "../assets/all_product";
 import Item from "../Items/Item";
-const RelatedProduct = () => {
+const RelatedProduct = ({ product }) => {
+  let [relateditems, setRelatedtItems] = useState([]);
+
+  useEffect(() => {
+    if (product && product.category) {
+      const filteredItems = data_product.filter(
+        (item) => item.category === product.category
+      );
+      setRelatedtItems(filteredItems);
+    }
+  }, [product.category, data_product]);
+
   return (
     <div className="related-product">
       <h1>Related Products</h1>
       <hr />
       <div className="product-item">
-        {data_product.map((item, i) => (
+        {relateditems.map((item, i) => (
           <Item
             key={i}
             id={item.id}

@@ -12,9 +12,6 @@ const ShopCategory = (props) => {
         <p>
           <strong>Showing 1-12</strong> out of 36 Products
         </p>
-        <div className="shopcategory-sort">
-          Sort by <img src={dorpdown_icon} alt="" />
-        </div>
       </div>
       <div className="shopcategory-products">
         {all_product.map((item, i) => {

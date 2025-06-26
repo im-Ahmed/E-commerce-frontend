@@ -24,3 +24,40 @@
   flex-wrap: wrap;
   gap: 50px;
 }
+@media (max-width: 1024px) {
+  .related-product h1 {
+    font-size: 32px;
+  }
+
+  .related-product hr {
+    width: 150px;
+    height: 4px;
+  }
+
+  .product-item {
+    gap: 30px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .related-product {
+    padding: 0 20px 10vh 20px;
+  }
+
+  .related-product h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .related-product hr {
+    width: 120px;
+    height: 3px;
+  }
+
+  .product-item {
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+}

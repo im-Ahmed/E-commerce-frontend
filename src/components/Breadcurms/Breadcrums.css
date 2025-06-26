@@ -1,7 +1,28 @@
 .breadscrum {
+  margin: 10px 0;
   height: 10vh;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-left: 10%;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .breadscrum {
+    margin-left: 5%;
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadscrum {
+    justify-content: center;
+    margin-left: 0;
+    text-align: center;
+    font-size: 13px;
+    padding: 0 10px;
+  }
 }

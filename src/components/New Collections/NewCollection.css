@@ -24,3 +24,36 @@
   flex-wrap: wrap;
   gap: 50px;
 }
+@media (max-width: 1024px) {
+  .new-collections h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .new-collections hr {
+    width: 150px;
+  }
+
+  .collections {
+    gap: 30px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-collections h1 {
+    font-size: 26px;
+  }
+
+  .new-collections hr {
+    width: 100px;
+    height: 4px;
+  }
+
+  .collections {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0 10px;
+  }
+}

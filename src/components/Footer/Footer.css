@@ -50,3 +50,68 @@
   border: none;
   background: #c7c7c7;
 }
+@media (max-width: 1024px) {
+  .footer {
+    gap: 40px;
+    padding: 8vh 0 4vh 0;
+  }
+
+  .footer-logo p {
+    font-size: 32px;
+  }
+
+  .footer-lniks {
+    gap: 20px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-social-icon {
+    gap: 16px;
+  }
+
+  .footer-icons-container {
+    padding: 8px;
+  }
+
+  .footer-copyright {
+    font-size: 16px;
+    gap: 20px;
+  }
+
+  .footer-copyright hr {
+    height: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    gap: 30px;
+    padding: 6vh 0 3vh 0;
+  }
+
+  .footer-logo p {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .footer-social-icon {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-icons-container {
+    padding: 6px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-copyright hr {
+    width: 90%;
+  }
+}

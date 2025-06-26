@@ -10,15 +10,9 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-logo">
         <img src={footer_logo} alt="" />
-        <p>SHOPPER</p>
+        <p>BrandName</p>
       </div>
-      <ul className="footer-lniks">
-        <li>Company</li>
-        <li>Products</li>
-        <li>Officers</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+
       <div className="footer-social-icon">
         <div className="footer-icons-container">
           <img src={instagram_icon} alt="" />
