@@ -31,7 +31,6 @@ _(Replace with your actual deployed link)_
 - 🛒 **Cart Page** – View and manage all selected products with total price.
 - 🔗 **Routing** – Smooth navigation with **React Router DOM**.
 - 💡 **Reusable Components** – Clean and modular structure using functional components.
-- 🌙 **Dark/Light Mode** (optional if added).
 - 📦 Future Ready – Easy to integrate with backend APIs.
 
 ---
